@@ -1,0 +1,33 @@
+body {
+	background-color: black;
+}
+
+div
+{
+width:200px; 
+height:50px; 
+margin: 0 left;
+}
+
+/* mixins */
+.roundedcornersmixin(@radius: 10px)
+{
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.gradient (@start: black, @stop: white,@origin: left) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
+#gradient1{
+background-color: blue;
+.roundedcornersmixin();
+.gradient(blue,white);
+}
