@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><!-- we need this line for modernizr -->
+<head>
+<title>Modernizr Ultra Basic Script Load Example</title>
+<script language="JavaScript" type="text/JavaScript" src="lib/script/modernizr.custom.15801.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="lib/script/loadchecks.js"></script>
+</head>
+<body>
+If you check the source of this page, you will see that "beer.js" is not loaded with the other scripts in the page head. <br>
+The javascript alert comes from the "beer.js" file, which represents a capability not supported by the browser as detected by Modernizr.<br><br>
+
+"loadchecks.js" calls Modernizr to check if "beer" is supported by the browser, as far as I am aware, no current browser supports any "beer" method, but they should.<br><br>
+
+If you check the debugger, in the html class tag of index.html, you will see a series of class="js no-....", this is Modernizr posting what methods <br>
+the browser page does NOT support, but should if it were HTML5 compliant. In loadchecks.js, I ask Modernizr if "beer" is supported, it is not, <br> 
+so in loadchecks.js I tell Modernizr to load the "shim" file beer.js.
+</body>
+</html>
