@@ -1,1 +1,0 @@
-Header background gradient is not working in IE.
